@@ -116,7 +116,7 @@ import com.datastax.spark.connector._
 
 scala> val rdd = sc.cassandraTable ("rapcas", "users")
 
-println(rdd.first)
+scala>println(rdd.first)
 
 ```
 
