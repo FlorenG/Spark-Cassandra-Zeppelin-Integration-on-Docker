@@ -70,7 +70,7 @@ bb2b7ad13878        bridge              bridge              local
 [...snip...]
 ```
 
-Add containers Spark and Cassandra to the newly created bridge,  <i>another_network bridge</i>:</br>
+Add containers Spark, Zeppelin and Cassandra to the newly created bridge,  <i>another_network bridge</i>:</br>
 
 ```
 root@server# docker ps  | sed -e 's/^\(.\{41\}\).*/\1/' | grep cassandra
