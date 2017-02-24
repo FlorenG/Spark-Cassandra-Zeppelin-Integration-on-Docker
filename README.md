@@ -95,7 +95,7 @@ root@server#  docker inspect $(docker ps  | sed -e 's/^\(.\{41\}\).*/\1/' | grep
 "172.17.0.2"
 
 root@server#  docker inspect $(docker ps  | sed -e 's/^\(.\{41\}\).*/\1/' | grep ledzeppelin | grep IPAddress |  awk 'NR==2 {print $NF}' | cut -f1 -d ','
-"172.17.0.5"
+"172.17.0.3"
 
 ``` 
 
