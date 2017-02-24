@@ -77,10 +77,12 @@ root@server# docker ps  | sed -e 's/^\(.\{41\}\).*/\1/' | grep cassandra
 a97b571a6bd6        cassandra
 root@server# docker ps  | sed -e 's/^\(.\{41\}\).*/\1/' | grep spark
 09f864b0e1b0        spark:1.6.0
-root@server#
+root@server# docker ps  | sed -e 's/^\(.\{41\}\).*/\1/' | grep  ledzeppelin
+5bd9cfdb969d  
 root@server#
 root@server# docker network connect another_bridge a97b571a6bd6
-root@server#docker network connect another_bridge 09f864b0e1b0 
+root@server# docker network connect another_bridge 09f864b0e1b0 
+root@server# docker network connect another_bridge 5bd9cfdb969d
 root@server#
 ```
 
