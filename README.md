@@ -1,4 +1,4 @@
-# Spark-Cassandra-Integration-on-Docker
+# Spark-Cassandra-Zeppelin-Integration-on-Docker
 
 
   - Run perl script <i>sparkling.pl</i> to create spark container.</br> 
