@@ -28,6 +28,8 @@ Welcome to
 scala>
 scala>
 ```
+  - For Zeppelin container creation go to https://github.com/Satanette/Zeppelin-on-Docker---Perl-script
+
 
   - Creating Cassandra container:
 
@@ -87,8 +89,12 @@ Enter in each container and ping each other (below, how to find out the IPs). If
 root@server# docker inspect $( docker ps  | sed -e 's/^\(.\{41\}\).*/\1/' | grep cassandra) | grep IPAddress | awk 'NR==2 {print $NF}' | cut -f1 -d ','
 "172.17.0.4"
 root@server#
-root@server#  docker inspect $(docker ps  | sed -e 's/^\(.\{41\}\).*/\1/' | grep spark) | grep IPAddress | grep IPAddress | awk 'NR==2 {print $NF}' | cut -f1 -d ','
-"172.17.0.3"
+root@server#  docker inspect $(docker ps  | sed -e 's/^\(.\{41\}\).*/\1/' | grep spark) | grep IPAddress |  awk 'NR==2 {print $NF}' | cut -f1 -d ','
+"172.17.0.2"
+
+root@server#  docker inspect $(docker ps  | sed -e 's/^\(.\{41\}\).*/\1/' | grep ledzeppelin | grep IPAddress |  awk 'NR==2 {print $NF}' | cut -f1 -d ','
+"172.17.0.5"
+
 ``` 
 
 From scala, run as following:
@@ -135,16 +141,28 @@ scala>
 ```
 
 
+From Zeppelin's side, do the following:
+
+1) From <i>Interpreters</i>, go to <b>spark</b> and add <i>spark.cassandra.connection.host </i>, and the Cassandra cluster's IP:
+
+
+![ScreenShot](https://github.com/Satanette/test/blob/master/add_hosts_spark_cassandra.png)
+
+Now add the necessary dependecies:
+
+![ScreenShot](https://github.com/Satanette/test/blob/master/spark_add_dependencies.png)
 
 
 
+2) Still from <i>Interpreters</i>, this time go to <b>cassandra</b> and add <i> Cassandra cluster's IP </i>
+
+![ScreenShot](https://github.com/Satanette/test/blob/master/hosts_cassandra.png)
 
 
 
+3) Create new notebook and test it:
 
-
-
-
+![ScreenShot](https://github.com/Satanette/test/blob/master/workish.png)
 
 
 
