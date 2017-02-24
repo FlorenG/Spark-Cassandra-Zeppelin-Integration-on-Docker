@@ -60,7 +60,7 @@ cqlsh:rapcas> select * from users;
 
 ```
 
-3) Make sure Spark and Cassandra are in the same network:
+3) Make sure Spark, Zeppelin and Cassandra are in the same network:
 ```
 root@server#docker network create --driver=bridge another_bridge 
 root@server#docker network ls
