@@ -28,7 +28,7 @@ Welcome to
 scala>
 scala>
 ```
-  - For Zeppelin container creation go to https://github.com/FlorenG/Zeppelin-on-Docker---Perl-script
+  - For Zeppelin container creation go to https://github.com/Satanette/Zeppelin-on-Docker---Perl-script
 
 
   - Creating Cassandra container:
